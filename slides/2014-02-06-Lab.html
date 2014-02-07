@@ -9,20 +9,25 @@
 
       body {
         font-family: 'Droid Serif';
-        font-size: 20px;
+        font-size: 25px;
+      }
+      .remark-slide-content {
+        padding: 1em 2em 1em 2em;
       }
       h1, h2, h3 {
         font-family: 'Yanone Kaffeesatz';
         font-weight: 400;
+        margin-top: 0;
         margin-bottom: 0;
       }
-      h1 { font-size: 4em; }
-      h2 { font-size: 2em; }
-      h3 { font-size: 1.6em; }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
       .footnote {
         position: absolute;
         bottom: 3em;
       }
+      ul { margin: 8px;}
       li p { line-height: 1.25em; }
       .red { color: #fa0000; }
       .large { font-size: 2em; }
@@ -36,8 +41,23 @@
         background: #e7e8e2;
         color: black;
         border-radius: 3px;
-        /*font-size: 16px;*/
       }
+      .tight-code {
+        font-size: 20px;
+      }
+      .white-background {
+        background-color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .limit-size img {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+        max-height: 500px;
+       }
       em { color: #80cafa; }
       .pull-left {
         float: left;
@@ -51,10 +71,10 @@
         clear: both;
       }
       #slideshow .slide .content code {
-        font-size: 0.8em;
+        font-size: 1.6em;
       }
       #slideshow .slide .content pre code {
-        font-size: 0.9em;
+        font-size: 1.6em;
         padding: 15px;
       }
       .inverse {
@@ -64,7 +84,7 @@
       }
       .inverse h1, .inverse h2 {
         color: #f3f3f3;
-        line-height: 0.8em;
+        line-height: 1.6em;
       }
 
       /* Slide-specific styling */
@@ -73,7 +93,7 @@
         left: 20px;
       }
       #slide-how .slides {
-        font-size: 0.9em;
+        font-size: 1.6em;
         position: absolute;
         top:  151px;
         right: 140px;
@@ -111,6 +131,10 @@
         width: 48%;
         float: right;
       }
+      .right-column img {
+        max-width: 120%;
+        max-height: 120%;
+      }
 
       /* Tables */
       table {
@@ -136,11 +160,10 @@ class: left, top, inverse
 
 ---
 
-*Todo: test!*
-
 ## Lab: Data Stats
 
-  + Obtain California (CA) [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
+  + Obtain federal [campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
+  + Reference the [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml)
   + Decompress
   + Manually check
   + Run ```code/stats.py```
@@ -149,12 +172,10 @@ class: left, top, inverse
 
 ---
 
-*Todo: test!*
-
 ## Data
 
-  + [campaign finance data](http://www.fec.gov/disclosurep/PDownload.do)
-  + We'll just be using CA data
+  + [Campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
+  + The [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml) tells you the format of the data
   + Decompress and investigate using the tools we discussed
 
 ---
