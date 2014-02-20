@@ -1,0 +1,65 @@
+Part 1
+
+The answer is:
+40      "I7lOTTYxHkjc144oAoL0-w"
+
+See the executed code below:
+
+(DMA)Timothys-MacBook-Pro:code timothymeyers$ python unique_review.py yelp_academic_dataset_review.json
+no configs found; falling back on auto-configuration
+no configs found; falling back on auto-configuration
+creating tmp directory /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-0-mapper_part-00000
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Counters from step 1:
+  (no counters found)
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-0-mapper-sorted
+> sort /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-0-mapper_part-00000
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-0-reducer_part-00000
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Counters from step 1:
+  (no counters found)
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-1-mapper_part-00000
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Counters from step 2:
+  (no counters found)
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-1-mapper-sorted
+> sort /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-1-mapper_part-00000
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-1-reducer_part-00000
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Counters from step 2:
+  (no counters found)
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-2-mapper_part-00000
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Counters from step 3:
+  (no counters found)
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-2-mapper-sorted
+> sort /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-2-mapper_part-00000
+writing to /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-2-reducer_part-00000
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Using positional arguments to MRJob.mr() is deprecated and will be removed in v0.5.0
+Counters from step 3:
+  (no counters found)
+Moving /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/step-2-reducer_part-00000 -> /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/output/part-00000
+Streaming final output from /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819/output
+40	"I7lOTTYxHkjc144oAoL0-w"
+removing tmp directory /var/folders/nq/qcqqvz9s5g3441jq5t9150y40000gn/T/unique_review.timothymeyers.20140219.072153.026819
