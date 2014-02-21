@@ -1,0 +1,80 @@
+Timothy Meyers
+Data Mining 290
+HW Obtain Data
+
+I will be working with flight data.  More specifically, I'll be examining
+airplane routes around the world.
+
+## What are the types of data available to you?
+
+I found flight data here: http://openflights.org/data.html.  Flight route
+data is contained in a .dat file, which I downloaded using wget:
+
+airbears2-10-142-156-100:code timothymeyers$ wget https://sourceforge.net/p/openflights/code/HEAD/tree/openflights/data/routes.dat?format=raw
+--2014-01-30 19:02:14--  https://sourceforge.net/p/openflights/code/HEAD/tree/openflights/data/routes.dat?format=raw
+Resolving sourceforge.net... 216.34.181.60
+Connecting to sourceforge.net|216.34.181.60|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://sourceforge.net/p/openflights/code/HEAD/tree/openflights/data/routes.dat?format=raw [following]
+--2014-01-30 19:02:14--  http://sourceforge.net/p/openflights/code/HEAD/tree/openflights/data/routes.dat?format=raw
+Connecting to sourceforge.net|216.34.181.60|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-ns-proxy-autoconfig]
+Saving to: 'routes.dat?format=raw'
+    [      <=>                              ] 2,093,850   1.75MB/s   in 1.1s   
+2014-01-30 19:02:16 (1.75 MB/s) - 'routes.dat?format=raw' saved [2093850]
+
+I renamed my file using the command: 
+mv routes.dat?format=raw routes.dat
+
+I used the following command to get a preliminary look at the data:
+Timothys-MacBook-Pro:code timothymeyers$ head routes.dat
+#C7,\N,MAO,2551,CIZ,7398,,0,EMB
+#C7,\N,MAO,2551,MBZ,7396,,0,EMB
+#C7,\N,MAO,2551,MNX,2594,,0,EMB
+#C7,\N,MNX,2594,RBB,7397,,0,EMB
+#C7,\N,RBB,7397,MAO,2551,,0,EMB
+2B,410,AER,2965,KZN,2990,,0,CR2
+2B,410,ASF,2966,KZN,2990,,0,CR2
+2B,410,CEK,2968,KZN,2990,,0,CR2
+2B,410,CEK,2968,OVB,4078,,0,CR2
+2B,410,CSY,6162,DME,4029,,0,CR2
+
+Here's Open Flights' explanantion of what each value in a row means:
+
+Airline	2-letter (IATA) or 3-letter (ICAO) code of the airline.
+Airline ID	Unique OpenFlights identifier for airline (see Airline).
+Source airport	3-letter (IATA) or 4-letter (ICAO) code of the source airport.
+Source airport ID	Unique OpenFlights identifier for source airport (see Airport)
+Destination airport	3-letter (IATA) or 4-letter (ICAO) code of the destination airport.
+Destination airport ID	Unique OpenFlights identifier for destination airport (see Airport)
+Codeshare	"Y" if this flight is a codeshare (that is, not operated by Airline, but another carrier), empty otherwise.
+Stops	Number of stops on this flight ("0" for direct)
+Equipment	3-letter codes for plane type(s) generally used on this flight, separated by spaces
+
+The types of data are comma-separated values.
+
+## For data sets: how many records are in the data set?
+
+Timothys-MacBook-Pro:code timothymeyers$ wc -l routes.dat
+   59637 routes.dat
+
+There are 59637 records in the data set.
+
+## Provide an "interesting" record, explain its properties and why it is interesting
+
+The following reveals two records that have the greatest number of different
+plane types that are generally used for the route:
+
+Timothys-MacBook-Pro:code timothymeyers$ egrep ".{3} .{3} .{3} .{3} .{3} .{3} .{3} .{3} .{3} .{3} .{3}" routes.dat
+US,5265,DEN,3751,IAH,3550,Y,0,752 320 738 739 E70 788 753 ERJ 319 73G 764
+US,5265,IAH,3550,DEN,3751,Y,0,319 739 788 CR7 752 738 73G 320 753 764 ERJ
+
+## What are 3 questions you could answer using your data?
+
+Which airport in the world services the greatest number of outbound routes?
+
+Which airport in the world services the greatest number of inbound routes?
+
+Which airline offers the greatest number of different routes?
+
