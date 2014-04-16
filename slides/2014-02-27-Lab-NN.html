@@ -164,101 +164,59 @@ class: left, top, inverse
 
 ---
 
-## Lab: Data Stats
+## Continue Back Propagation from Slides
 
-  + Obtain federal [campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
-  + Reference the [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml)
-  + Decompress
-  + Manually check
-  + Run ```code/stats.py```
-  + Edit ```code/stats.py``` to add functionality
-  + Pull Request submission
+.white-background[
+<img src="img/ann8.png"/>
+]
 
----
+???
 
-## Data
+## Expected
 
-  + [Campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
-  + The [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml) tells you the format of the data
-  + Decompress and investigate using the tools we discussed
+  + Labeling: Top to bottom, left to right:
+  + 1 is upper left, 2 is lower left, 3 is top hidden layer, 6 is output layer
 
 ---
 
-## Code
+## Submit
 
-```bash
-$ git checkout master
-$ git pull jretz master
-$ git checkout -b hw-stats
+  ```nn-train.txt```
+```text
+err_6 = -0.11346127339699999
+err_5 = -0.0011326458827956695
+err_4 =
+err_3 =
+
+w_56 = 0.37298917134759924
+w_46 =
+w_36 =
+
+err_2 =
+err_1 =
+w_25 =
+w_24 =
+w_23 =
+w_15 =
+w_14 =
+w_13 =
 ```
-  + Run and edit ```code/stats.py```
-
----
-
-## Stats
-
-  + Minimum
-  + Maximum
-  + Mean
-  + Median
-  + Standard Deviation
-  + Candidates
-  + Normalized sample contributions
-
----
-
-## Extra credit
-
-  + Extra credit is used to get you *up to 100%*
-  + On the *current assignment*
-  + Also helpful for learning topics more in depth
-  + You may do partial extra credit
 
 ???
 
-## Overall Extra Credit
+## Fill In
 
-  + Extra credit that applies to overall grade will not be assigned
-
----
-
-## Extra Credit
-  + Stats per candidate
-  + z-score
+  + Fill in values
+  + You may use a calculator or Python
+  + If you want feedback or partial credit, include any code in another file
 
 ---
 
-## Git usage
+## Project
 
-  + All edits, commits, pushes should happen on a ```hw-``` or ```project``` branch
-  + ```git status```
-  + All pulls (typically from ```jretz```) should happen on ```master``` branch
-  + If you use an editor connected to ischool server, make sure you are
-    *either* editing *or* using git
-
-???
-
-## Exceptions
-
-  + There are exceptions but know what you're trying to do
-  + External editors can write back files *after* you've changed git branches
-
----
-
-## Submission
-
-  + GitHub pull request
-  + If something is going wrong, submit by email: jretz@ischool,
-    shreyas@ischool
-  + We'll help you submit the pull request, but you'll get full credit
-
-???
-
-## Submission
-
-  + The pull request is a way for Shreyas and I to easily see changes, grade
-  + It'll give you good experience, but it is not a fundamental skill of the
-    class, so I'm not too worried about it
+  + Find a partner (if applicable)
+  + Find a [data set](http://blog.bigml.com/2013/02/28/data-data-data-thousands-of-public-data-sources/)
+  + Start brainstorming
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">
