@@ -1,0 +1,43 @@
+Timothy Meyers
+Midterm Corrections
+
+7: Using the advertising schema above, give concrete examples for the following operations
+
+	7.4: Pivot
+
+	An example of a pivot would be to show, instead of the list of pages on which an advertisement appears, the list of advertisements that appear on a page.
+
+8: Put the following steps for building a classifier in the correct chronological order
+
+Correct ordering: 1,5,4,7,6,2,3
+
+10: What is information gain and how is it used to build decision trees?
+
+From chapter 8.2.2 of Data Mining, information gain is a measure for evaluating the "information content" of messages.  Information gain is used as the splitting attribute when deciding how to partition the tuples within a node.
+
+11: Fixing gradient descent
+
+Either the learning step in the gradient descent algorithm is negative (instead of positive), or the step size is too large.  To fix this, we should make sure it is positive and not too large.
+
+12: When implementing a neural network trainer, what are our terminating conditions?
+
+a) When we reach our desired level of accuracy.
+b) When the error at the output node approaches 0 or some other tolerable level we define
+c) When our weights from one layer to another become close to equal.
+
+14: Draw a dendrogram showing clustering for these points
+
+   ___________     |Level
+  |        __|__   |3
+ _|_      |     |  |2
+|  |     _|_    |  |1
+|  |    |  |    |  |0
+C  E    D  B    A  |
+
+16: What is the Jaccard index between these two sets:
+
+intersection = { the midterm }
+|intersection| = 2
+union = { good luck on the midterm is over }
+|union| = 7
+Jaccard = |intersection|/|union| = 2/7
